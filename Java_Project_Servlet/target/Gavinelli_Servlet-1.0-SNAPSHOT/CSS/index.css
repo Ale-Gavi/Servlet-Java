@@ -1,0 +1,149 @@
+:root{
+    --bg-color: #F0EEE7;
+    --card-bg: #5F4BB6;
+    --light-shadow: #53668D;
+    --input-bg: #C6D3EB;
+    --h1-color: #53668D;
+    --h2-color: #6D8BC1;
+    --hover-color: #87AFF5;
+    --focus-color: #6989C1;
+}
+
+.darkMode{
+    --bg-color: #1E1C24;
+    --card-bg: #3B2F6E;
+    --light-shadow: #4C5164;
+    --input-bg: #3A4054;
+    --h1-color: #53668D;
+    --h2-color: #6D8BC1;
+    --hover-color: #A0B8FF;
+    --focus-color: #8092C9;
+
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    transition: .4s;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.topNav{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 100%;
+}
+
+.titles{
+    text-align: center;
+    align-self: center;
+    grid-column: 2;
+    width: 100%;
+}
+
+.titles h1{
+    color: var(--h1-color);
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.titles h2{
+    color: var(--h2-color);
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.changeMode{
+    grid-column: 3;
+    justify-self: end;
+    align-self: center;
+    margin: 10px;
+}
+
+.changeMode button{
+    background-color: var(--input-bg);
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+
+    transition: .4s;
+}
+
+.changeMode button:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+    box-shadow: inset -3px -5px 1px var(--light-shadow);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    flex-grow: 1;
+}
+
+.main p{
+    color: var(--h2-color);
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.main button{
+    background-color: var(--input-bg);
+    border: none;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+
+    transition: .4s;
+}
+
+.main button:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+    box-shadow: inset -3px -5px 1px var(--light-shadow);
+}
+
+.main a{
+    text-decoration: none;
+    color: var(--h2-color);
+    font-weight: bold;
+    font-size: 40px;
+    padding: 10px;
+
+    transition: .4s;
+}
+
+.main button:hover > a{
+    color: var(--h2-color);
+}
+
+.footer{
+    margin-top: auto;
+}
+
+.footer p{
+    color: var(--h2-color);
+    font-weight: bold;
+    font-size: 24px;
+}

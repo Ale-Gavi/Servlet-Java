@@ -1,0 +1,355 @@
+:root{
+    --bg-color: #F0EEE7;
+    --card-bg: #616FB2;
+    --light-shadow: #53668D;
+    --input-bg: #C6D3EB;
+    --h1-color: #53668D;
+    --h2-color: #6D8BC1;
+    --hover-color: #87AFF5;
+    --focus-color: #6989C1;
+    --menu-bg: rgba(0, 0, 0, 0.582);
+}
+
+.darkMode{
+    --bg-color: #1E1C24;
+    --card-bg: #616FB2;
+    --light-shadow: #4C5164;
+    --input-bg: #3A4054;
+    --h1-color: #53668D;
+    --h2-color: #6D8BC1;
+    --hover-color: #A0B8FF;
+    --focus-color: #8092C9;
+    --menu-bg: rgba(255, 255, 255, 0.582);
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    transition: .4s;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.navBar{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 100%;
+}
+
+.menu{
+    grid-column: 1;
+    justify-self: start;
+    align-self: center;
+    margin: 10px;
+
+    z-index: 3;
+}
+
+.menu:hover{
+    cursor: pointer;
+}
+
+.menu:hover > .bar1, .menu:hover > .bar2, .menu:hover > .bar3{
+    background-color: var(--hover-color);
+}
+
+.bar1, .bar2, .bar3{
+    width: 35px;
+    height: 5px;
+    background-color: var(--input-bg);
+    margin: 6px;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(45deg);
+    background-color: var(--input-bg);
+}
+
+.change .bar2 {
+    opacity: 0;
+    background-color: var(--input-bg);
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(-45deg);
+    background-color: var(--input-bg);
+
+}
+
+.title{
+    text-align: center;
+    align-self: center;
+    grid-column: 2;
+    width: 100%;
+}
+
+.title h1{
+    color: var(--h1-color);
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.cart{
+    grid-column: 3;
+    justify-self: end;
+    align-self: center;
+    margin: 10px;
+}
+
+.cart img{
+    width: 70px;
+}
+
+.items{
+    width: 100%;
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    place-items: center;
+    gap: 16px;
+    padding: 1rem;
+}
+
+.itemCard{
+    background-color: var(--card-bg);
+
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px;
+    margin: 10px;
+    border-radius: 40px;
+    transition: .4s;
+
+    overflow: hidden;
+
+    box-shadow: inset -10px -15px 20px #3B2F6E, inset 5px 5px 20px white;
+}
+
+.itemCard > img{
+    width: 160px;
+    margin: 10px;
+
+}
+
+.itemCard:hover{
+    box-shadow: inset -10px -15px 20px #3B2F6E, inset 5px 5px 20px white, 10px 10px 10px var(--menu-bg);
+    cursor: pointer;
+}
+
+.descrizione{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.descrizione p{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.descrizione span{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.prezzo{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.spinner-container {
+    display: flex;
+    align-items: center;
+    width: 140px;
+    margin: 2rem auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.spinner-button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 0 16px;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+    height: 40px;
+    transition: background 0.2s;
+}
+
+.spinner-button:hover {
+    background-color: #e0e0e0;
+}
+
+.spinner-input {
+    width: 100%;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    height: 40px;
+    outline: none;
+}
+
+form #submit{
+    background-color: #ffd814;
+    margin-top: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+form #submit:hover{
+    cursor: pointer;
+    background-color: #E8C412;
+}
+
+form #submit:active{
+    transition: 0s;
+    background-color: #B4873E;
+}
+
+.hiddenMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 0;
+    background-color: var(--menu-bg);
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 3;
+
+    transition: .4s;
+}
+
+.hiddenMenu ul{
+    list-style: none;
+}
+
+.hiddenMenu li{
+    margin: 40px;
+    font-size: 40px;
+}
+
+.hiddenMenu a{
+    text-decoration: none;
+    color: var(--h2-color);
+    transition: .4s;
+}
+
+.hiddenMenu a.current{
+    text-decoration: underline;
+    color: var(--input-bg);
+}
+
+.hiddenMenu a:hover{
+    text-decoration: underline;
+    color: var(--input-bg);
+}
+
+.hiddenMenu.open {
+    width: 30%;
+    overflow: visible;
+
+}
+
+.changeMode{
+    grid-column: 3;
+    justify-self: end;
+    align-self: center;
+}
+
+.changeMode button{
+    background-color: var(--input-bg);
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+
+    transition: .4s;
+}
+
+.changeMode button:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+    box-shadow: inset -3px -5px 1px var(--light-shadow);
+}
+
+.logOut{
+    margin-top: auto;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logOut p{
+    color: var(--bg-color);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logOut a{
+    color: rgb(146, 0, 0);
+    font-size: 30px;
+    text-decoration: none;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.logOut a:hover{
+    transition: .4s;
+    color: rgb(255, 0, 0);
+    text-decoration: underline;
+}
+
+.blurOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+
+    z-index: 2;
+}
+
+.blurOverlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}

@@ -1,0 +1,252 @@
+:root{
+    --bg-color: #F0EEE7;
+    --card-bg: #5F4BB6;
+    --light-shadow: #9C8DDF;
+    --dark-shadow: #2D1E73;
+    --input-bg: #C6D3EB;
+    --hover-color: #87AFF5;
+    --focus-color: #6989C1;
+    --text-color: #000000;
+}
+
+.darkMode{
+    --bg-color: #1E1C24;
+    --card-bg: #3B2F6E;
+    --light-shadow: #574A93;
+    --dark-shadow: #120C2B;
+    --input-bg: #3A4054;
+    --hover-color: #A0B8FF;
+    --focus-color: #8092C9;
+    --text-color: #000000;
+    --text-color: #ffffff;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    transition: .4s;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.wrapper{
+    margin-top: 20px;
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    box-shadow: inset 15px 15px 20px var(--light-shadow), inset -10px -10px 20px var(--dark-shadow);
+}
+
+form {
+    padding: 40px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form h2 {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-size: 20px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    border: 2px solid var(--hover-color);
+    border-radius: 10px;
+    background-color: var(--input-bg);
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover {
+    border-color: var(--hover-color);
+    outline: none;
+    background-color: var(--hover-color);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: var(--focus-color);
+    outline: none;
+    background-color: var(--focus-color);
+    color: var(--text-color);
+}
+
+
+input[type="text"]:focus::placeholder,
+input[type="password"]:focus::placeholder {
+    transition: 0.5s;
+    color: transparent;
+}
+
+button, input[type="submit"]{
+    transition: 0.5s;
+    padding: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    background-color: var(--hover-color);
+    color: var(--bg-color);
+    border-radius: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.submit input[type="submit"]:hover, button:hover {
+    cursor: pointer;
+    background-color: var(--hover-color);
+}
+
+.submit input[type="submit"]:focus, button:focus{
+    transition: 0s;
+    background-color: var(--focus-color);
+}
+
+
+footer {
+    color: var(--focus-color);
+    text-align: center;
+    padding: 10px;
+}
+
+/* Tablet - max-width 1024px */
+@media (max-width: 1024px) {
+    .wrapper {
+        padding: 30px;
+        border-radius: 30px;
+        width: 80%;
+    }
+
+    form {
+        padding: 30px;
+        border-radius: 30px;
+    }
+
+    form h2 {
+        font-size: 32px;
+    }
+
+    label {
+        font-size: 18px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        font-size: 15px;
+        padding: 8px;
+    }
+
+    button, input[type="submit"] {
+        font-size: 18px;
+        padding: 10px;
+    }
+}
+
+/* Smartphone - max-width 768px */
+@media (max-width: 768px) {
+    .wrapper {
+        width: 90%;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    form {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    form h2 {
+        font-size: 26px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button, input[type="submit"] {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* Small phones - max-width 480px */
+@media (max-width: 480px) {
+    .wrapper {
+        width: 95%;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    form {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    form h2 {
+        font-size: 22px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        font-size: 13px;
+        padding: 6px;
+    }
+
+    button, input[type="submit"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
