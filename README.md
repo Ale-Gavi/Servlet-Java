@@ -181,6 +181,7 @@ It provides users with authentication, product browsing, shopping cart managemen
 
 ## Copyright
 **Author:** Alessandro Gavinelli
+
 **Purpose:** Educational project for Java web programming and database integration.
 
 ---
