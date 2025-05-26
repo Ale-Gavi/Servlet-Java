@@ -180,8 +180,13 @@ It provides users with authentication, product browsing, shopping cart managemen
 ---
 
 ## Copyright
-**Author:** Alessandro Gavinelli
+---
+© 2025 Alessandro Gavinelli
 
-**Purpose:** Educational project for Java web programming and database integration.
+This project and its source code are provided "as is" for educational and personal use.
 
+**Feel free to use, download, edit, and share this code.**  
+However, if you use this project or parts of it as a base for your own work, please give proper credit to the original author.
+
+Thank you for respecting these terms!
 ---
