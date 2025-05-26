@@ -1,7 +1,3 @@
-Assolutamente, ti preparo una versione molto più completa e dettagliata del README che integra tutte le parti di codice e funzionalità che mi hai fornito, con sezioni ben strutturate e approfondite.
-
----
-
 # Java Servlet E-commerce Project - README
 
 ---
